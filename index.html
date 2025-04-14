@@ -1,0 +1,2860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="icon" type="image/x-icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Angkor&family=Caprasimo&family=Macondo&family=Moirai+One&family=RocknRoll+One&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="manifest" href="manifest.json">
+    <title>Himachal360</title>
+
+    <style>
+.client a{
+align-items:center;
+text-align:center;
+text-decoration:none;
+background:black;
+padding:5px 20px;
+color:white;
+border-radius:10px;
+}
+.client{
+width:100%;
+height:400px;
+align-items:center;
+text-align:center;
+}
+#animatedDiv #logo-icon{
+position:absolute;
+left:4%;
+top:5%;
+}
+#animatedDiv a{
+color:white;
+background:#333A73;
+padding:5px 15px;
+border-radius:5px;
+text-decoration:none;
+}
+#animatedDiv {
+    display: none; /* Initially hidden */
+    position: fixed;    
+top: 50%;
+right:5%;
+    width:30%;
+    background-color: black;
+    text-align: center;
+    transition: top 0.8s; /* Smooth transition for the 'top' property */
+z-index:10000000000000000;
+ animation-name: top;
+  animation-duration: 0.8s;
+}
+@keyframes top {
+  from {opacity:0;
+}
+  to {opacity:1;
+transition:all 0.8s;
+}
+}
+
+/* No need for a .show class, as styles will be applied directly via JS */
+.animatedivsign{
+position:relative;
+width:100%;
+background:red;
+}
+.SIGNOUT{
+background:white;
+position:absolute;
+width:100%;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+padding:20px;
+border-radius:20px;
+box-shadow:0px 6px 12px rgba(0,0,0,0.5);
+}
+#noButton{
+background:white;
+color:black;
+padding:3px 10px;
+border-radius:5px;
+font-size:14px;
+position:absolute;
+top:1%;
+right:1%;
+}
+
+ #timed-div {
+    display: block;
+position:fixed;
+top:0;
+left:0;
+height:100vh;
+    width: 100%;
+    text-align: center;
+    background:white;linear-gradient(#008DDA,white,white);
+z-index:1000000;
+  }
+  .hiddenload {
+    display: none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:white;
+z-index:10000000000000;
+  }
+.d{
+position:relative;
+width:100%;
+height:100vh;
+text-align:center;
+}
+.spinner {
+   position: absolute;
+   width: 15.7px;
+   height: 15.7px;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+.spinner div {
+   width: 100%;
+   height: 100%;
+   background-color: #474bff;
+   border-radius: 50%;
+   animation: spinner-4t3wzl 1.25s infinite backwards;
+}
+
+.spinner div:nth-child(1) {
+   animation-delay: 0.15s;
+   background-color: rgba(71,75,255,0.9);
+}
+
+.spinner div:nth-child(2) {
+   animation-delay: 0.3s;
+   background-color: rgba(71,75,255,0.8);
+}
+
+.spinner div:nth-child(3) {
+   animation-delay: 0.45s;
+   background-color: rgba(71,75,255,0.7);
+}
+
+.spinner div:nth-child(4) {
+   animation-delay: 0.6s;
+   background-color: rgba(71,75,255,0.6);
+}
+
+.spinner div:nth-child(5) {
+   animation-delay: 0.75s;
+   background-color: rgba(71,75,255,0.5);
+}
+
+@keyframes spinner-4t3wzl {
+   0% {
+      transform: rotate(0deg) translateY(-200%);
+   }
+
+   60%, 100% {
+      transform: rotate(360deg) translateY(-200%);
+   }
+}
+#continue{
+color:white;
+position:relative;
+left:10px;
+}
+.second button{
+width:200px;
+}
+.second a{
+color:black;
+}
+.second h1,.second p{
+color:white;
+}
+ .swiper {
+      width: 100%;
+      height: 70%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+.swiper img{
+width:50%;
+display:absolute;
+}
+.second button{
+background:black;
+border:none;
+border-radius:20px;
+font-size:20px;
+padding:5px 30px;
+color:white;
+transition:all 0.5s;
+border:1px solid white;
+}
+.second button:hover{
+background:white;
+color:black;
+border:1px solid black;
+transition:all 0.5s;
+}
+.second{
+width:100%;
+height:40vh;
+position:relative;
+background:#008DDA;
+}
+.second h1{
+font-size:40px;
+}
+.popupmessagefirst {
+    display: none; /* Initially hide the popupmessage */
+    position: fixed;
+    top:0%;
+    left:0%;
+    background:white;
+    border-radius: 10px;
+    color: black;
+    z-index: 10000000;
+    width:100%;
+height:100vh;
+box-shadow:0px 3px 10px rgba(0,0,0,0.4);
+  transition:all 0.1s;
+text-align: center;
+}
+
+/* Animation */
+.popupmessagefirst.fade-in {
+    animation: fadeIn 0.01s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.user-auth button{
+width:200px;
+font-size:20px;
+position:relative;
+bottom:2px;
+background:transparent;
+border:none;
+color:white;
+font-weight:bold;
+}
+.user-gif{
+width:100%;
+height:50vh;
+display:flex;
+justify-content:center;
+}
+.user-gif img{
+width:40vw;
+height:100%;
+}
+.user-auth{
+width:100%;
+height:30vh;
+text-align:center;
+align-items:center;
+}
+#user-icon{
+color:white;
+}
+.user-auth a{
+text-decoration:none;
+color:white;
+font-size:20px;
+background:#333A73;
+padding:5px;
+position:relative;
+top:15px;
+border-radius:10px;
+}
+
+.carousel-inner{
+height:500px;
+text-align:center;
+align-items:center;
+}
+.carousel-inner img{
+width:50%;
+display:absolute;
+}
+.carousel-caption{
+top:300px;
+}
+
+.alert {
+  background-color: skyblue;
+ padding:20px;
+  color: white;
+}
+
+.closebtnalert {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtnalert:hover {
+  color: black;
+}
+#installButton{
+position:fixed;
+top:2%;
+left:1%;
+z-index:100000;
+}
+.bottom-navbar a{
+color:black;
+}
+  .bottom-navbar{
+position:fixed;
+bottom:0;
+width:100%;
+height:80px;
+background:#FBF9F1;
+ display: flex;
+    justify-content: center;
+border-radius:10px 10px 0 0 ;
+border-top1px solid rgba(0,0,0,0.3);;
+z-index:10000;
+gap:0.5rem;
+}
+.bottom-one{
+backgroundred;
+border:1px solid black;
+height:100%;
+width:80px;
+position:relative;
+border-radius:50%;
+}
+
+.bottom-one{
+cursor: pointer;
+    transition:all width 0.3s, height 0.3s;
+border:none;
+
+}
+  .active {
+scale:1.3;
+transition:all 0.5;
+background:#FBF9F1;
+border-radius:50%;
+  }
+.active #bottom-icons{
+color:black;
+transition: all 0.5s;
+}
+
+#bottom-icons{
+position:absolute;
+top:40%;
+left:50%;
+transform:translate(-50%,-50%);
+color:#008DDA;
+}
+.bottom-one p{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:12px;
+}
+.invest-money{
+width:100%;
+height:auto;
+display:flex;
+justify-content:center;
+gap:3rem;
+}
+.invest-image{
+width:40%;
+height:400px
+
+}
+.invest-image img{
+width:100%;
+height:100%;
+
+}
+
+.step-one{
+backgroundgreen;
+PADDING:5px 10PX;
+WIDTH:100%;
+border-bottom:1px solid rgba(0,0,0,0.3);
+}
+.step-one h2{
+font-size:18px;
+}
+.step-one h3{
+color:rgba(0,0,0,0.3);
+}
+
+
+.resize-content{
+display:flex;
+jusify-content:space-between;;
+backgroundred;
+}
+.resize-right{
+width:30%;
+height:300px;
+backgroundgreen;
+}
+.resize-right img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+  .height-100 {
+    width: 100%;
+    height: 50px;
+    background-color lightblue;
+    transition: height 0.5s ease;
+    cursor: pointer;
+  }
+  .height-200 {
+    height: 200px;
+  }
+#resizableDiv,#resizableDivv,#resizableDivvv,#resizableDivvvv,#resizableDivvvvv,#resizableDivvvvvv{
+overflow:hidden;
+position:relative;
+text-aligncenter;
+border-bottom:1px solid #333;
+}
+#resizableDiv h2,#resizableDivv h2,#resizableDivvv h2,#resizableDivvvv h2,#resizableDivvvvv h2,#resizableDivvvvvv h2{
+position:relative;
+bottom:10px;
+}
+#resizableDiv p,#resizableDivv p,#resizableDivvv p,#resizableDivvvv p,#resizableDivvvvv p,#resizableDivvvvvv p{
+position:relative;
+padding:5px;
+text-align:left;
+}
+.inner-container,.inner-containerr,.inner-containerrr,.inner-containerrrr,.inner-containerrrrr,.inner-containerrrrrr {
+    width: 50px;
+    height: 50px;
+position:absolute;
+top:0;
+right:0;
+    background-colorlightcoral;
+    transition: transform 0.5s ease;
+
+  }
+  .rotate,.rotatee,.rotateee,.rotateeee,.rotateeeee,.rotateeeeee {
+    transform: rotate(180deg);
+  }
+
+.inner{
+position:relative;
+backgroundgreen;
+height:100%;
+width:100%;
+
+}
+.inner-rotate{
+position:absolute;
+backgroundred;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+#expand-icon{
+font-size:30px;
+font-weight:bold;
+}
+#news,#contact,#about,{
+text-align:center;
+}
+#pade-one-heading{
+display:none;
+}
+.three-a a{
+text-decoration:none;
+color:white;
+background:black;
+padding:10px 20px;
+border-radius:10px;
+transition:all 0.5s;
+}
+.three-a a:hover{
+color:black;
+background:white;
+border:2px solid black;
+transition:all 0.5s;
+}
+ .calculator {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+background:#008DDA;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="number"], select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+ background:transparent;
+    }
+.calculator input{
+font-size:17px;
+border:none;
+border-bottom:1px solid #333;
+border-radius:0;
+font-weight:bold;
+ background:transparent;
+}
+#years{
+width:50%;
+font-size:17px;
+border:none;
+border-bottom:1px solid #333;
+border-radius:none;
+color:black;
+ background:none;
+}
+.flex-int{
+display:flex;
+justify-content:center;
+gap:1rem;
+background:rgba(0,0,0,0.3
+);
+padding:5px;
+border-radius:10px;
+}
+#totalResult{
+width:70%;
+text-align:center;
+}
+#interestResult{
+text-align:center;
+}
+.int{
+position:relative;
+top:20px;
+}
+input,#years{
+outline:none;
+}
+#logo-icon{
+font-size:35px;
+color:white;
+font-weight:bold;
+background:#008DDA;
+border-radius:0 7px 0 7px;
+border:1px solid #008DDA;
+}
+.three-a{
+text-align:center;
+display:flex;
+justify-content:center;
+}
+.three-right{
+opacity:0;
+transition:all 1s;
+filter:blur(10px);
+}
+
+.showm{
+opacity:1;
+filter:blur(0);
+}
+
+.page-three a{
+color:white;
+background:black;
+text-decoration:none;
+padding:10px 20px;
+border-radius:5px;
+}
+#three-page-left{
+backgroundblue;
+display:flex;
+position:relative;
+justify-content:center;
+gap:1rem;
+border-bottom:2px solid black;
+}
+.three-one{
+text-align:left;
+padding:10px;
+}
+.three-right{
+backgroundyellow;
+width:80%;
+height:80%;
+}
+.three-right img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+body{
+font-family:RocknRoll one;
+}
+.page-heading{
+opacity:0;
+transition:all 1s;
+filter:blur(10px);
+transform:translateY(100%);
+}
+
+.showu{
+opacity:1;
+filter:blur(0);
+transform:translateX(-0);
+}
+.inner-scroll{
+opacity:0;
+transition:all 1s;
+filter:blur(10px);
+transform:translateY(100%);
+}
+
+.showl{
+opacity:1;
+filter:blur(0);
+transform:translateX(-0);
+}
+#et-icons{
+font-size:35px;
+color:black;
+color:skyblue;
+}
+.ET-money h1,#two-journey,#scroll-heading{
+font-size:40px;
+text-align:center;
+}
+
+.et-money p{
+font-size:22px;
+padding:20px 30px;
+}
+.et-money{
+width:100%;
+height:auto;
+display:flex;
+justify-content:center;
+border-bottom:1px solid black;
+}
+#et-money-right{
+border-left:1px solid black;
+}
+.et-one{
+width:100%;
+height:auto;
+text-align:center;
+}
+.inner-scroll{
+width:180px;
+height:130px;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+display:flex;
+justify-content:center;
+gap:1rem;
+}
+.inner-scroll p{
+font-size:18px;
+}
+#inner-icons{
+color:black;
+top:50px;
+position:relative;
+font-size:30px;
+color:skyblue;
+}
+.scroll-left{
+   width: 100%;
+height:250px;
+      overflow-x: auto;
+overflow-y:hidden;
+      white-space: nowrap; 
+display:flex;
+justify-content:center;
+}
+.first-scroll,.second-scroll,.third-scroll{
+ display: inline-block;
+      width: 240px;
+      height: 200px; 
+      background-colorred; 
+      margin-right: 30px; 
+border-radius:20px;
+position:relative;
+box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+top:20px;
+left:20px;
+}
+
+.container-center-rel{
+position:relative;
+width:100%;
+height:150px;
+backgroundred;
+top100px;
+}
+.container-center{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+backgroundred;
+width:80%;
+}
+  .element-with-gradient {
+      width: 50px;;
+      height: 120px;
+      background: linear-gradient(to left, transparent, white);
+      border 1px solid #ccc;
+      transition: background 0.5s ease; 
+position:absolute;
+top:0;
+left:0;
+    }
+ .element-with-gradienttwo {
+      width: 50px;;
+      height: 120px;
+      background: linear-gradient(to right, transparent, white);
+      border 1px solid #ccc;
+      transition: background 0.5s ease; 
+position:absolute;
+top:0;
+right:0;
+    }
+    #container {
+      width: 100%;
+height:120px;
+      overflow: hidden;
+      white-space: nowrap;
+      border 1px solid black;
+backgroundgreen;
+position:relative;
+ 
+
+    }
+
+    .moving-div {
+      width: 160px;
+      height: 100px;
+      background-color #3498db;
+      display: inline-block;
+      margin: 5px;
+      position: relative;
+      animation: moveDivs 15s linear infinite; /* Adjust the duration as needed */
+    }
+
+    @keyframes moveDivs {
+      from { transform: translateY(0); }
+      to { transform: translateX(-659%); }
+    }
+.moving-div img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+
+#box-icon{
+font-size:21px;
+color:black;
+}
+.box a{
+text-decoration:none;
+color:white;
+background:skyblue;
+padding:4px 10px;
+border-radius:5px;
+}
+.tablink {
+  background-color: #fff;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 12px;
+  font-size: 17px;
+  width: 25%;
+  border-radius:10px;
+font-weight:bold;
+text-shadow:2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.tablink:hover {
+  background-color: purple;
+border-radius:10px;
+color:white;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+
+#Home {background-color: white;}
+#News {background-color: white;}
+#Contact {background-color: white;}
+#About {background-color: white;}
+
+
+.page-two{
+display:flex;
+height:auto;
+}
+.two-left{
+width:100%;
+height:auto;
+border1px solid black;
+}
+.two-right{
+width:70%;
+height:70%;
+opacity:0;
+transition:all 1s;
+filter:blur(10px);
+}
+
+.showb{
+opacity:1;
+filter:blur(0);
+}
+
+.two-right img{
+width:100%;
+height:100%;
+position:relative;
+top:250px;
+}
+.animate__animated.animate__rubberBand {
+  --animate-duration: 2s;
+}
+.material-symbols-outlined{
+position:relative;
+top:5px;
+font-weight:bold;
+color:skyblue;
+}
+.get-started img{
+width:30px;
+height:30px;
+position:relative;
+top:5px;
+filter:invert(100%);
+border-radius:5px;
+
+}
+.container-onee{
+display:none;
+}
+.container-one{
+width:300px;
+height:auto;
+backgroundgreen;
+position:absolute;
+z-index:10;
+top:10%;
+}
+.box-inside,.box-inside-two{
+width:100%;
+height:100%;
+position:relative;
+backgroundblue;
+}
+.box-inside{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+gap:2rem;
+}
+.rod{
+position:absolute;
+left:5%;
+width:10px;
+height:100%;
+background:black;
+border-radius:20px;
+border:1px solid white;
+}
+.box{
+width:85%;
+left:40px;
+height:auto;
+background:rgba(0,0,0,0.4);
+position:relative;
+opacity:0;
+transition:all 1s;
+filter:blur(10px);
+transform:translateY(100%);
+font-size:14px;
+color:white;
+border-radius:10px;
+padding:5px;
+}
+
+.shows{
+opacity:1;
+filter:blur(0);
+transform:translateX(0);
+}   
+.container-two{
+width:500px;
+height:AUTO;
+backgroundred;
+position:absolute;
+z-index:10;
+top:35%;
+left:55%;
+transform:translate(-50%,-50%);
+position:absolute;
+text-align:center;
+}
+.get-started{
+position:relative;
+}
+.box-inside-two a:hover{
+background:white;
+transition:all 0.6s;
+border:1px solid black;
+color:black;
+}
+.box-inside-two a{
+text-decoration:none;
+position:absolute;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+font-size:30px;
+background:black;
+border-radius:5px;
+padding:5px 10px;
+transition:all 0.6s;
+border:1px solid white;
+}
+.box-inside-two p{
+font-size:17px;
+color:black;
+}
+.box-inside-two h1{
+font-size:45px;
+color:white;
+text-shadow:2px 2px 5px rgba(0,0,0,0.6);
+}
+body {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.outer-container::-webkit-scrollbar {
+  display: none;
+    color:white;
+    background:transparent;
+}
+
+ .outer-container {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+background:transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+display:none; 
+}
+
+body::-webkit-scrollbar-thumb {
+   background: transparent;
+display:none; 
+}
+*{
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+input,textarea,button,select,a{
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a:focus,a:visited,a:active{
+outline:none;
+}
+body {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+img {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+html{
+scroll-behavior:smooth;
+}
+body{
+padding:0;
+margin:0;
+
+}
+
+
+
+
+.body {
+  display: flex;
+  background green;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height:500px;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+
+.container {
+      position: relative;
+backgroundgreen;
+      height: 150vh;
+    }
+
+    .sticky-image {
+      width: 100%;
+      height: 100vh; /* Set the height of the sticky image */
+      background-image: url('images/landing.jpeg'); 
+      background-size: cover;
+      background-position: center;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .text-overlay {
+      position: absolute;
+      bottom: 0%;
+      left: 0;
+      width: 100%;
+height:auto;
+      padding: 10px;
+      box-sizing: border-box;
+      background: linear-gradient(transparent,transparent,white);
+      z-index: 2;
+text-align:center;
+ opacity:0;
+transition:all 1s;
+filter:blur(10px);
+}
+
+.showt{
+opacity:1;
+filter:blur(0);
+}
+.text-overlay h1{
+font-size:50px;
+color:black;
+}
+.text-overlay p{
+font-size:28px;
+color:black;
+}
+
+
+
+.page-one{
+display:none;
+position:relative;
+}
+.page-one{
+width:100%;
+height:100vh;
+border2px solid black;
+position:relative;
+overflow:hidden;
+    z-index:4;
+}
+.page-two,.page-three{
+width:100%;
+height:auto;
+background:white;
+border2px solid black;
+position:relative;
+overflow:hidden;
+    z-index:2;
+}
+
+  #form-container h1{
+color:#333A73;
+text-align:center;
+font-size:40px;
+}
+
+
+    #form-container {
+       position: fixed;
+      top: -300%; 
+      left: 50%;
+      transform: translateX(-50%);
+      background-color:white;
+      padding: 20px;
+      width: 100%;
+height:100vh;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      transition: top 0.2s ease-in-out, opacity 0.5s ease-in-out;
+      opacity: 0;
+z-index:100000;
+    }
+
+
+
+    #close-button {
+      position: absolute;
+      top: 10px;
+      right: 5%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: black;
+    }
+
+  #form-containerrr h1{
+color:#333A73;
+text-align:center;
+font-size:40px;
+}
+
+
+    #form-containerrr {
+       position: fixed;
+      top: -300%; 
+      left: 50%;
+      transform: translateX(-50%);
+      background-color:white;
+      padding: 20px;
+      width: 100%;
+height:100vh;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      transition: top 0.2s ease-in-out, opacity 0.5s ease-in-out;
+      opacity: 0;
+z-index:100000;
+    }
+
+
+
+    #close-buttonnn {
+      position: absolute;
+      top: 10px;
+      right: 5%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: black;
+    }
+
+section{
+width:100%;
+height:auto;
+}
+header{
+width:100%;
+height:100px;
+position:fixed;
+top:0;
+display:flex;
+justify-content:space-between;
+background:rgba(255,255,255,0.8);
+     transition: background-color 0.3s ease;
+            z-index: 100;
+box-shadow:3px 5px 10px rgba(0,0,0,0.3);
+}
+.navigation-anchor{
+backgroundgreen;
+width:auto;300px;
+display:flex;
+justify-content:center;
+gap:1rem;
+position:relative;
+}
+header h1{
+font-size:30px;
+position:relative;
+left:25px;
+font-family:angkor;
+}
+
+#signin{
+text-decoration:none;
+font-size:21px;
+background:black;
+position:relative;
+top:24px;
+right:5px;
+border-radius:5px;
+height24px;
+font-weight:bold;
+padding:5px 10px;
+color:white;
+transition:all ease 0.5s;
+width:30px;
+height:40px;
+border:1px solid white;
+}
+#signin img{
+width:25px;
+height:25px;
+filter:invert(100%);
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+.navigation-anchor a{
+text-decoration:none;
+font-size:21px;
+backgroundorange;
+position:relative;;
+top:27px;
+height:24px;
+font-weight:bold;
+padding:5px 10px;
+color:black;
+transition:all ease 0.5s;
+}
+.navigation-anchor a:hover{
+color:black;
+scale:1.1;
+transition:all ease 0.5s;
+text-decoration:underline;
+}
+#main-h {
+text-decoration:none;
+color:rgba(0,0,0,0.7);
+     transition: background-color 0.3s ease;
+            z-index: 100;
+cursor:pointer;
+}
+.main-h{
+opacity:0;
+transition:all 1s;
+filter:blur(10px);
+transform:translateY(-100%);
+scale0;
+}
+
+.showslidesub{
+scale0.98;
+opacity:1;
+filter:blur(0);
+transform:translateX(0);
+}
+.combine{
+display:flex;
+gap:2rem;
+}
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+ background-color: rgba(0,0,0,0.8);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: orange;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.hamburger{
+position:relative;
+z-index:100000;
+backgroundred;
+display:none;
+width:30px;
+height:25px;
+top:35px;
+right:12px;
+}
+.hamburger img{
+width:100%;
+height:100;
+}
+ #form-containerr h1{
+color:#333A73;
+text-align:center;
+font-size:40px;
+}
+
+
+    #form-containerr {
+      position: fixed;
+      top: -300%; 
+      left: 50%;
+      transform: translateX(-50%);
+      background-color:white;
+      padding: 20px;
+      width: 100%;
+height:100vh;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      transition: top 0.2s ease-in-out, opacity 0.5s ease-in-out;
+      opacity: 0;
+z-index:100000;
+display:block;
+    }
+
+
+
+    #close-buttonn {
+      position: absolute;
+      top: 10px;
+      right: 5%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: BLACK;
+    }
+@media(max-width:768px){
+header h1{
+font-size:23px;
+position:relative;
+left:10px;
+top:10px;
+font-family:angkor;
+}
+.combine{
+display:none;
+}
+.overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+.hamburger{
+display:block;
+}
+  #form-containerr h1{
+color:black;
+text-align:center;
+font-size:40px;
+}
+
+
+    #form-containerr {
+      position: fixed;
+      top: -300%; 
+      left: 50%;
+      transform: translateX(-50%);
+      background-color:white;
+      padding: 20px;
+      width: 100%;
+height:100vh;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      transition: top 0.2s ease-in-out, opacity 0.5s ease-in-out;
+      opacity: 0;
+z-index:100000;
+display:block;
+    }
+
+
+
+    #close-buttonn {
+      position: absolute;
+      top: 10px;
+      right: 5%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: BLACK;
+    }
+.text-overlay {
+      position: absolute;
+      bottom: 0%;
+      left: 0;
+      width: 100%;
+height:auto;
+      padding: 20px;
+      box-sizing: border-box;
+      background: linear-gradient(transparent,transparent,white);
+      z-index: 2;
+text-align:center;
+    }
+.text-overlay h1{
+font-size:30px;
+}
+.text-overlay p{
+font-size:22px;
+}
+.container-one{
+display:none;
+}
+.container-two{
+width:100%;
+height:AUTO;
+backgroundred;
+position:absolute;
+z-index:10;
+top:30%;
+left:50%;
+transform:translate(-50%,-50%);
+position:absolute;
+text-align:center;
+}
+.container-onee{
+width:100%;
+height:auto;
+position:absolute;
+z-index:10;
+top:0%;
+display:block
+}
+ .rod{
+position:absolute;
+left:3%;
+width:10px;
+height:100%;
+border:2px solid white;
+background:skyblue;
+border-radius:20px;
+}
+.box{
+width:85%;
+left:33px;
+color:white;
+border-radius:10px;
+padding:8px;
+background:black;
+}
+.page-one{
+display:block;
+position:relative;
+}
+.page-heading{
+opacity:0;
+transition:all 1s;
+filter:blur(10px);
+transform:translateY(100%);
+}
+
+.showu{
+opacity:1;
+filter:blur(0);
+transform:translateX(-0);
+}
+.inner-scroll{
+opacity:0;
+transition:all 1s;
+filter:blur(10px);
+transform:translateY(100%);
+}
+
+.showl{
+opacity:1;
+filter:blur(0);
+transform:translateX(-0);
+}
+.page-one h1{
+position:relative;
+left:10px;
+font-weight:bold;
+font-size:35px;
+}
+.get-started a{
+font-size:18px;
+}
+
+ .get-started img{
+width:25px;
+height:25px;
+}
+.page-two{
+display:flex;
+flex-direction:column;
+height:auto;
+}
+.two-left{
+width:100%;
+height:auto;
+background:red;
+}
+.two-right{
+width:100%;
+height:70%;
+opacity:0;
+transition:all 1s;
+filter:blur(10px);
+}
+.two-right img{
+position:relative;
+top:0;
+}
+.showb{
+opacity:1;
+filter:blur(0);
+}
+.tablink {
+  background-color: #fff;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 7px 8px;
+  font-size: 14px;
+  width: 25%;
+  border-radius:10px;
+font-weight:bold;
+}
+
+.tablink:hover {
+  background-color: black;
+border-radius:10px;
+color:white
+}
+
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.box-inside-two h1{
+font-size:36px;
+color:white;
+}
+#container {
+      width: 100%;
+  overflow: hidden;
+backgroundgreen;
+}
+.moving-div {
+      width: 100px;
+      height: 70px;
+  animation: moveDivs 25s linear infinite; /* Adjust the duration as needed */
+}
+@keyframes moveDivs {
+      from { transform: translateY(0); }
+      to { transform: translateX(-694%); }
+    }
+.container-center{
+width:100%;
+}
+.scroll-left{
+   width: 100%;
+height:180px;
+      overflow-x: auto;
+overflow-y:hidden;
+      white-space: nowrap; 
+display:block;
+}
+.first-scroll,.second-scroll,.third-scroll{
+ display: inline-block;
+      width: 170px;
+      height: 140px; 
+      background-colorred; 
+      margin-right: 30px; 
+border-radius:20px;
+position:relative;
+box-shadow:6px 6px 10px rgba(0,0,0,0.6);
+}
+.inner-scroll{
+width:120px;
+height:80px;
+position:absolute;
+top:40%;
+left:50%;
+transform:translate(-50%,-50%);
+
+}
+.inner-scroll p{
+font-size:14px;
+}
+#inner-icons{
+top:35px;
+position:relative;
+font-size:25px;
+}
+.ET-money h1,#scroll-heading{
+font-size:32px;
+}
+.et-money p{
+font-size:20px;
+padding:20px;
+}
+#two-journey{
+display:none;
+}
+.page-three{
+display:flex;
+flex-direction:column;
+}
+#three-page-left{
+backgroundblue;
+display:flex;
+position:relative;
+justify-content:center;
+}
+.three-one{
+text-align:center;
+padding:10px;
+
+}
+.three-right{
+backgroundyellow;
+width:100%;
+height:80%;
+}
+#logo-icon{
+font-size:30px;
+color:white;
+font-weight:bold;
+background:#008DDA;
+border-radius:0 7px 0 7px;
+}
+.calculator {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+#pade-one-heading{
+display:block;
+text-align:center;
+font-size:32px;
+}
+#resizableDiv h2,#resizableDivv h2,#resizableDivvv h2,#resizableDivvvv h2,#resizableDivvvvv h2,#resizableDivvvvvv h2{
+position:relative;
+font-size:13px;
+text-align:left;
+padding:0px 8px;
+}
+#resizableDiv p,#resizableDivv p,#resizableDivvv p,#resizableDivvvv p,#resizableDivvvvv p,#resizableDivvvvvv p{
+padding:5px;
+font-size:12px;
+width:100%;
+background:green;
+object-fit:contain;
+}
+.resize-content{
+display:block;
+}
+.resize-right{
+display:none;
+}
+.invest-money{
+display:block;
+}
+.invest-image{
+width:100%;
+height:300px
+}
+#invest-h1{
+font-size:32px;
+font-weightbold;
+}
+.step-one{
+backgroundgreen;
+PADDING:5px 10PX;
+WIDTH:85%;
+border-bottom:1px solid rgba(0,0,0,0.3);
+}
+.second{
+width:100%;
+height:50vh;
+position:relative;
+background:#008DDA;
+}
+.carousel-inner{
+height:350px;
+}
+.carousel-inner img{
+width:100%;
+display:block;
+}
+.swiper img{
+width:100%;
+display:absolute;
+}
+.swiper{
+height:50%;
+}
+.second h1,.second p{
+color:white;
+}
+.second p{
+font-size:14px;
+}
+.user-gif img{
+width:100%;
+height:100%;
+}
+.SIGNOUT{
+background:white;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+padding:20px;
+border-radius:20px;
+box-shadow:0px 6px 12px rgba(0,0,0,0.5);
+width:70%;
+}
+.SIGNOUT h2{
+font-size:16px;
+}
+#noButton{
+background:white;
+color:black;
+border:1px solid black;
+padding:3px 10px;
+border-radius:5px;
+font-size:12px;
+}
+
+}
+</style>
+</head>
+<body>
+<div id="animatedDiv">
+<div class="animatedivsign">
+<div class="SIGNOUT">
+<div class="signalign">
+
+<span id="logo-icon" class="material-symbols-outlined">
+storm
+</span><br>
+<p>Welcome to Himachal360<br>if you'r new user please register<br><br>
+<a href="register.html" id="registeration">Sign-up</a><br><br>Already a user<br><br><a href="signin.html" id="userlogin">log-in</a>
+</p>
+    <button id="noButton">X</button>
+
+
+</div>
+</div>
+</div>
+</div>
+<div id="timed-div">
+  <div class="d">
+  <div class="spinner">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</div>
+</div>
+
+<div id="myDiv" class="hiddenload">
+<div class="d">
+  <div class="spinner">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</div>
+</div>
+ <div id="popupmessagefirst" class="popupmessagefirst">
+            <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/hello.png" alt="..."></div>
+      <div class="swiper-slide"><img src="images/group.png" alt="..." ></div>
+      <div class="swiper-slide"> <img src="images/third.png" alt="..."></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+<div class="second">
+<h1>WELCOME</h1>
+<p>HIMACHAL360 The best FD Fixed Deposit in Himachal Pradesh That Provide You with <spam style="font-weight:bold;color:black">10%</spam> ineterest rate per an.
+<br><br>
+<button type="button" onclick="closepopupmessagefirst()">CONTINUE <span id="continue" class="material-symbols-outlined">
+chevron_right
+</span></button>
+<br>
+<p>By proceeding you agree the <a href="#">Terms & Condition</a> and <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+<button id="installButton" style="display: none;">Install PWA</button>
+<section>
+<div class="bottom-navbar">
+<div class="bottom-one"><a href="index.html"><div class="bottom-one active" onclick="makeActive(this)"><span id="bottom-icons" class="material-symbols-outlined">
+home_app_logo
+</span><p>Home</p></div></a></div>
+<div class="bottom-one" onclick="toggleForm()"><div class="bottom-one" onclick="makeActive(this)"><span id="bottom-icons" class="material-symbols-outlined">
+settings
+</span><p>setting</p></div></div>
+<div class="bottom-one" onclick="toggleFormmm()"><div class="bottom-one" onclick="makeActive(this)" ><span id="bottom-icons" class="material-symbols-outlined">
+search
+</span><p>search</p></div></div>
+<div class="bottom-one" onclick="toggleFormm()" ><div class="bottom-one" onclick="makeActive(this)"><span id="bottom-icons" class="material-symbols-outlined">
+account_circle
+</span><p>user</p></div></div>
+</div>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="signin.html">signin</a>
+  </div>
+</div>
+<div id="form-containerr">
+<div class="form-equall" style="text-align:center;">
+  <button id="close-buttonn" onclick="toggleFormm()">Close X</button>
+  <div class="user-gif"><img src="images/group.png" alt="..."></div>
+  <h1>HIMACHAL360</h1>
+<p>Stay organised and live stress-free with <spam style="background:skyblue;color:white;padding:4px;">FD</spam> app</p>
+<div class="user-auth"><a href="signin.html" id="Hide"><button>Login</button> <span id="user-icon" class="material-symbols-outlined">
+person
+</span></a><br><br><br><a href="register.html" id="hideButton"><button>Signup</button> <span id="user-icon" class="material-symbols-outlined">
+how_to_reg
+</span></a></div>
+</div>
+</div>
+<div id="form-container" style="z-index:100000000000;">
+<div class="form-equall" style="text-align:center;">
+  <button id="close-buttonn" onclick="toggleForm()">Close X</button>
+  <div class="user-gif"><img src="images/group.png" alt="..."></div>
+  <h1>HIMACHAL360 Setting </h1>
+<p>Stay organised and live stress-free with <spam style="background:skyblue;color:white;padding:4px;">FD</spam> app</p>
+<div class="user-auth">
+<h2 style="color:orange">we will soon provide you the basic setting page! <span class="material-symbols-outlined">
+settings
+</span></h2>
+</div>
+</div>
+</div>
+<div id="form-containerrr" style="z-index:100000000000;">
+<div class="form-equall" style="text-align:center;">
+  <button id="close-buttonnn" onclick="toggleFormmm()">Close X</button>
+  <div class="user-gif"><img src="images/group.png" alt="..."></div>
+  <h1>HIMACHAL360 Search </h1>
+<p>Stay organised and live stress-free with <spam style="background:skyblue;color:white;padding:4px;">FD</spam> app</p>
+<div class="user-auth">
+<h2 style="color:orange">we will soon provide this search page! <span class="material-symbols-outlined">
+search
+</span></h2>
+</div>
+</div>
+</div>
+<header id="main-header">
+<div class="main-h">
+<h1><a href="index.html" id="main-h"> <span id="logo-icon" class="material-symbols-outlined">
+storm
+</span> HIMACHAL360</a></h1></div>
+<div class="combine">
+<div class="navigation-anchor">
+<a href="#">About</a>
+<a href="#">Artical</a>
+<a href="#">Blog</a> 
+</div>
+<div id="signin" ><img src="images/signin.png" alt="signin"></div>
+</div>
+<div class="hamburger" id="hamburger"><img src="images/bar.png" onclick="openNav()" alt="bars"></div>
+
+</header>
+
+
+<div class="container">
+  <div class="sticky-image"></div>
+<div class="container-one">
+<div class="box-inside">
+<div class="rod"></div>
+<div class="box">
+ <span style="font-weight:bold;font-size:25px;">Deposits</span> <span class="material-symbols-outlined">
+currency_rupee
+</span><br>Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a>
+</div>
+<div class="box">
+<span style="font-weight:bold;font-size:25px;">Return</span> <span class="material-symbols-outlined">
+assignment_return
+</span><br>
+ Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a>
+</div>
+<div class="box">
+<span style="font-weight:bold;font-size:25px;">Insterest</span> <span class="material-symbols-outlined">
+percent
+</span><br>
+ Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a>
+</div>
+</div>
+</div>
+<div class="container-two">
+<div class="box-inside-two">
+<h1 class="animate__animated animate__rubberBand animate__delay-1s" >HIMACHAL360</h1>
+
+<p class="animate__animated animate__rubberBand animate__delay-1s">Your diligent saver planning for your future financial stability. invest a portion of your savings into <span style="color:white;text-shadow:none;font-weight:bold;background:skyblue;padding:0px 5px;">HIMACHAL360</span> Fixed Deposit (FD) with a <span style="color:white;font-weight:bold;text-shadow:none;background:skyblue;padding:0px 5px;">10%</span> interest rate.</p><br><br>
+<div class="get-started" id="clickMe5">
+<a href="register.html" id="hideButton">Get Started <img src="images/arrow.gif"></a>
+</div>
+</div>
+</div>
+  <div class="text-overlay">
+    <h1>Himachal Pradesh</h1>
+    <p>Himachal Pradesh, situated in the northern part of India, is a state of enchanting beauty, diverse landscapes, and rich cultural heritage. Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination.
+
+</p>
+  </div>
+</div>
+
+
+<div class="container-center-rel">
+<div class="container-center">
+<div id="container">
+  <div class="moving-div"><img src="images/B.png " alt=" "></div>
+  <div class="moving-div"><img src="images/H.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/M.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/S.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/Se.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/M.png  " alt=" "></div>
+
+<div class="moving-div"><img src="images/B.png " alt=" "></div>
+  <div class="moving-div"><img src="images/H.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/M.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/S.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/Se.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/B.png  " alt=" "></div>
+
+<div class="moving-div"><img src="images/B.png " alt=" "></div>
+  <div class="moving-div"><img src="images/H.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/M.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/S.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/Se.png  " alt=" "></div>
+  <div class="moving-div"><img src="images/B.png  " alt=" "></div>
+ <div class="element-with-gradient"></div>
+<div class="element-with-gradienttwo"></div>
+</div>
+</div>
+</div>
+
+<h1 id="pade-one-heading" class="page-heading">Begin your <spam style="background:skyblue;color:white;padding:0px 5px;">FD</spam> investment<br> today</h1>
+
+<div class="alert">
+  <span class="closebtnalert" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong style="color:black;">Himachal360</strong> Welcomes you in the best (FD) fixed Acoount with high and best returns with <strong style="color:black;">10%</strong> per an.
+</div><br>
+<div class="page-one">
+<div class="container-onee">
+<div class="box-inside">
+<div class="rod"></div>
+<div class="box">
+<span style="font-weight:bold;font-size:22px;">Deposits</span> <span class="material-symbols-outlined">
+currency_rupee
+</span><br><br>Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a><br><br>
+</div>
+<div class="box">
+<span style="font-weight:bold;font-size:22px;">Return</span> <span class="material-symbols-outlined">
+assignment_return
+</span><br><br>
+ Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a><br><br>
+</div>
+<div class="box">
+<span style="font-weight:bold;font-size:22px;">Insterest</span> <span class="material-symbols-outlined">
+percent
+</span><br><br>
+ Here's an overview of the various aspects that make Himachal Pradesh a unique and captivating destination<br><br>
+<a href="">Overview</a><br><br>
+</div>
+</div>
+</div>
+</div>
+
+<h1 id="two-journey" class="page-heading">Begin your <spam style="color:white;background:skyblue;padding:0px 5px;">FD</spam> investment<br> today</h1>
+<div class="page-two">
+<div class="two-right"><img src="images/group.png"></div>
+<div class="two-left">
+<button class="tablink" onclick="openPage('Home', this, 'skyblue')" id="defaultOpen">Cal FDs <span class="material-symbols-outlined" id="box-icon">
+calculate
+</span></button>
+<button class="tablink" onclick="openPage('News', this, 'skyblue')" >Interest <span class="material-symbols-outlined" id="box-icon">
+percent
+</span></button>
+<button class="tablink" onclick="openPage('Contact', this, 'skyblue')">FIXEDs <span class="material-symbols-outlined" id="box-icon">
+currency_rupee
+</span></button>
+<button class="tablink" onclick="openPage('About', this, 'skyblue')">Terms <span class="material-symbols-outlined" id="box-icon">
+description
+</span></button>
+
+<div id="Home" class="tabcontent">
+<h2 style="text-align:center;"><spam style="background:skyblue;padding:5px;color:white;">Earn up tp 10% interest on FD</spam></h2>
+<p style="text-align:center;">calculate the maturity amount and interest earned on your investment using online FD calculator</p>
+  <div class="calculator">
+<h3>Provider</h3>
+    <h2><span id="logo-icon" class="material-symbols-outlined">
+storm
+</span> HIMACHAL360 Ltd.</h2>
+    <label for="amount">Investment amount</label>
+   <div style="display:flex;"><spam style="font-weight:bold;color:white;font-size:20px;position:relative;top:5px;"> ₹</spam><input type="number"  id="amount" value="1000" placeholder="Enter amount"></div>
+
+    <label for="years">Investment tenure</label>
+   
+    <select id="years">
+        <option value="12">1 year</option>
+        <option value="24">2 year</option>
+        <option value="36">3 year</option>
+        <option value="48">4 year</option>
+        <option value="60">5 year</option>
+    </select>
+
+   <div class="flex-int"> <div class="int">interest<br> <spam style="font-weight:bold;color:white;">10%</spam> pa</div><div id="totalResult" style="margin-top: 20px;"></div></div>
+    <div id="interestResult" style="margin-top: 20px;"></div>
+</div>
+<div class="three-a"><a href="register.html" id="clickMe3">Open FD <span class="material-symbols-outlined">
+lock
+</span></a></div>
+</div>
+<div id="News" class="tabcontent">
+  <h3>Interest</h3>
+   <p>With Himachal360, you can invest with confidence, knowing that your hard-earned money is in safe hands. Join thousands of satisfied investors who have entrusted us with their financial future and had <spam style="font-size:20px;font-weight:bold;background:skyblue;color:white;padding:3px;">10% </spam>rate of int per anum.
+
+Start your journey towards financial prosperity with Himachal360 today!</p>
+ 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3 >Welcome to Himachal360 - Your Trusted Fixed Deposit Partner</h3>
+  <p >
+
+At Himachal360, we believe in securing your financial future with stability and reliability. As a leading fixed deposit company, we offer you the opportunity to grow your savings through our secure and transparent investment options.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3 >Why Choose Himachal360?</h3>
+  <p >
+
+High Returns: Earn an impressive 10% interest per annum on your fixed deposits, ensuring steady growth of your savings.
+Safety First: Your trust is our top priority. We provide a secure and regulated platform for your investments, offering peace of mind and financial security.
+Flexible Investment Tenures: Choose from a range of flexible investment tenures to suit your financial goals and preferences.
+Transparent Processes: We believe in transparency and honesty. With Himachal360, you can be assured of clear terms and conditions, ensuring a hassle-free investment experience.
+Dedicated Customer Support: Our team of financial experts is dedicated to assisting you at every step of your investment journey. Whether you have queries or need guidance, we are here to help..</p>
+</div>
+</div>
+
+</div>
+
+<h1 id="invest-h1" class="page-heading" style="text-align:center;">How to Invest in <spam style="background:skyblue;color:white;padding:5px;">HIMACHAL360</spam> Fixed Deposits</h1>
+<div class="invest-money">
+<div class="invest-left"><div class="step-one"><h3>Step 1</h3><h2>Complete your registration</h2></div>
+<div class="step-one"><h3>Step 2</h3><h2>Choose the right FD</h2></div>
+<div class="step-one"><h3>Step 3</h3><h2>Make your payment (ET money)</h2></div>
+</div>
+<div  class="invest-image"><img src="images/invest.png"></div>
+</div>
+
+<div class="ET-money">
+<h1 style="text-align:center;" class="page-heading">Why <spam style="background:skyblue;color:white;font-weight:bold;padding:0px 5px;">ET </spam>Money</h1>
+<div class="et-money">
+<div class="et-one"><p class="page-heading"><span id="et-icons" class="material-symbols-outlined">
+flash_on
+</span><br>Fast,easy and paperless</p></div>
+
+<div class="et-one" id="et-money-right"><p class="page-heading"><span id="et-icons" class="material-symbols-outlined">
+tap_and_play
+</span><br>One-tap FD creation once your account is created</p></div>
+</div>
+</div>
+<br><br><br>
+<h1 id="scroll-heading" class="page-heading">Start your journey with <spam style="background:skyblue;padding:0px 5px;color:white;font-weight:bold;">HIMACHAL360</spam></h1><br>
+<div class="scroll-left">
+<div class="first-scroll"><div class="inner-scroll"><span id="inner-icons" class="material-symbols-outlined">
+currency_rupee
+</span><p>Earn <br>returns<br> upto 10%</p></div></div>
+<div class="second-scroll"><div class="inner-scroll"><span id="inner-icons" class="material-symbols-outlined">
+account_balance
+</span><p>Book<br>FD<br> with any bank<br> (a/c)</p></div></div>
+<div class="third-scroll"><div class="inner-scroll"><span id="inner-icons" class="material-symbols-outlined">
+lock
+</span><p>Payments <br>are done<br> securely</p></div></div>
+<div class="third-scroll"><div class="inner-scroll"><span id="inner-icons" class="material-symbols-outlined">
+gpp_maybe
+</span><p>Take <br>your<br> own risk for FDs</p></div></div>
+</div>
+<br><br><br>
+<div STYLE="display:flex;" class="page-three">
+<div style="width:100%;" class="three-left">
+<h1 style="text-align:center;" class="page-heading"><spam style="padding:10px;">Highest Credit Ratings | Not 100%
+Assured Returns on <spam style="background:skyblue;color:white;padding:5px;">FD</spam> if company goes in loss</spam></h1> <br>
+<p class="page-heading"><spam style="background:skyblue;padding:5px;color:white;">HIMACHAL360 FD Deposits</spam></p>
+<div class="page-heading" id="three-page-left">
+<div class="three-one"><p>Interest rate<br>
+<spam style="font-weight:bold;">Upto 10% per an</spam> </p></div>
+<div class="three-one"><p>Tenure<br>
+<spam style="font-weight:bold;">60 months</spam> </p></div>
+<div class="three-one" style="border-right:none;"><p>Deposit Amount<br>
+<spam style="font-weight:bold;">Rs.1000 to <br>Rs.10000</spam> </p></div>
+</div>
+<p class="page-heading"> <spam style="background:skyblue;padding:5px;color:white;">Regular FDs</spam></p>
+<div class="page-heading" id="three-page-left">
+
+<div class="three-one"><p>Interest rate<br>
+<spam style="font-weight:bold;">Upto 10% per an</spam> </p></div>
+<div class="three-one"><p>Flexible Tenure<br>
+<spam style="font-weight:bold;">12 to <br>60 months</spam> </p></div>
+<div class="three-one" style="border-right:none;"><p>Deposit Amount<br>
+<spam style="font-weight:bold;">Rs.1000 to <br>Rs.10000</spam> </p></div>
+</div><br>
+<div class="three-a"><a href="register.html" id="clickMe4">Open FD <span class="material-symbols-outlined">
+lock
+</span></a></div><br><br>
+</div>
+<div  class="three-right">
+<img src="images/third.png">
+</div>
+</div>
+<div class="page-four">
+<div class="resize-content">
+<div class="resize-down">
+<div id="resizableDiv" class="height-100" onclick="toggleHeight()"><h2>Can i withdraw my money from an ET money FD</h2><br><p>askbduyesgdhbqsaducgwduybwi<br>hdvwudvgwiefvdkwjbdssadasdasdads<br>fwfwqefadbadjabksdkgabededsacdscdcdcd</p><div class="inner-container"><div class="inner"><div class="inner-rotate"><span id="expand-icon" class="material-symbols-outlined">
+expand_more
+</span></div></div></div></div>
+
+<div id="resizableDivv" style="backgroundgreen;" class="height-100" onclick="toggleHeightt()"><h2>Am i eligible to invest in Fixed Deposit?</h2><br><p>askbduyesgdhbqsaducgwduybwihdvwudvgwiefvdkwjb</p><div class="inner-containerr"><div class="inner"><div class="inner-rotate"><span id="expand-icon" class="material-symbols-outlined">
+expand_more
+</span></div></div></div></div>
+
+<div id="resizableDivvv" class="height-100" onclick="toggleHeighttt()"><h2>What is the mininmun and maximum amount to be deposited</h2><br><p>askbduyesgdhbqsaducgwduybwihdvwudvgwiefvdkwjb</p><div class="inner-containerrr"><div class="inner"><div class="inner-rotate"><span id="expand-icon" class="material-symbols-outlined">
+expand_more
+</span></div></div></div></div>
+
+
+<div id="resizableDivvvvv" class="height-100" onclick="toggleHeighttttt()"><h2>can i close my Fised Deposit Prematurely?</h2><br><p>askbduyesgdhbqsaducgwduybwihdvwudvgwiefvdkwjb</p><div class="inner-containerrrrr"><div class="inner"><div class="inner-rotate"><span id="expand-icon" class="material-symbols-outlined">
+expand_more
+</span></div></div></div></div>
+
+<div id="resizableDivvvvvv" class="height-100" onclick="toggleHeightttttt()"><h2>what is the penalty charge for the premature closure?</h2><br><p>askbduyesgdhbqsaducgwduybwihdvwudvgwiefvdkwjb</p><div class="inner-containerrrrrr"><div class="inner"><div class="inner-rotate"><span id="expand-icon" class="material-symbols-outlined">
+expand_more
+</span></div></div></div></div>
+</div>
+<div class="resize-right"><img src="images/money.png"></div>
+</div>
+
+</div>
+<br>
+<div class="client">
+<h2 style="text-align:center;"><spam style="background:skyblue;padding:5px;color:white;">What our client says</spam></h2>
+<br>
+<h3 style="text-align:center; padding:0 20px;">At [Your Client's Name], we pride ourselves on delivering top-notch products/services and fostering meaningful connections with our audience. Our client, [Client's Name], is a dynamic organization dedicated to [brief description of their primary focus or industry].</h3>
+<br>
+<a href="table.html">What our client says -></a>
+</div>
+<div class="body">
+ <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+    </ul>
+    <p>&copy;2024 sanjay bodh | All Rights Reserved</p>
+  </footer>
+</div>
+</section>
+</body>
+
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+    });
+  </script>
+
+<script>
+        document.addEventListener('scroll', function () {
+            var header = document.getElementById('main-header');
+            var h  document.getElementById('main-h');
+            var scrollPosition = window.scrollY;
+
+            // Adjust the opacity based on scroll position
+            header.style.backgroundColor = 'rgba(255,255,255, ' + (0.3 - scrollPosition / 300) + ')';
+             h.style.color = 'rgba(0, 0, 0, ' + (0.7 - scrollPosition / 300) + ')';
+        });
+ </script>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+  document.getElementById("hamburger").style.opacity = "0";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+   document.getElementById("hamburger").style.opacity = "1";
+}
+
+</script>
+<script defer>
+const observers = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('showslidesub');  
+} 
+});
+});
+
+const hiddenElements = document.querySelectorAll('.main-h');
+hiddenElements.forEach((el) => observers.observe(el));
+
+</script>
+
+<script defer>
+const observersb = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('showb');    
+} 
+});
+});
+
+const hiddenElementsb = document.querySelectorAll('.two-right');
+hiddenElementsb.forEach((el) => observersb.observe(el));
+
+
+</script>
+<script defer>
+const observersm = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('showm');     
+} 
+});
+});
+
+const hiddenElementsm = document.querySelectorAll('.three-right');
+hiddenElementsm.forEach((el) => observersm.observe(el));
+
+
+</script>
+<script defer>
+const observerst = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('showt');    
+} 
+});
+});
+
+const hiddenElementst = document.querySelectorAll('.text-overlay');
+hiddenElementst.forEach((el) => observerst.observe(el));
+
+
+</script>
+<script defer>
+const observersu = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('showu');      
+} 
+});
+});
+
+const hiddenElementsu = document.querySelectorAll('.page-heading');
+hiddenElementsu.forEach((el) => observersu.observe(el));
+
+
+</script>
+<script defer>
+const observersl = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('showl');     
+} 
+});
+});
+
+const hiddenElementsl = document.querySelectorAll('.inner-scroll');
+hiddenElementsl.forEach((el) => observersl.observe(el));
+
+
+</script>
+<script>
+  let formVisible = false;
+
+  function toggleForm() {
+    const formContainer = document.getElementById('form-container');
+
+    if (formVisible) {
+      formContainer.style.top = '-300%';
+      formContainer.style.opacity = '0';
+    } else {
+      formContainer.style.top = '0%';
+      formContainer.style.opacity = '1';
+    }
+
+    formVisible = !formVisible;
+  }
+</script>
+<script>
+  let formVisiblee = false;
+
+  function toggleFormm() {
+    const formContainerr = document.getElementById('form-containerr');
+
+    if (formVisiblee) {
+      formContainerr.style.top = '-300%';
+      formContainerr.style.opacity = '0';
+    } else {
+      formContainerr.style.top = '0%';
+      formContainerr.style.opacity = '1';
+    }
+
+    formVisiblee = !formVisiblee;
+  }
+</script>
+<script>
+  let formVisibleee = false;
+
+  function toggleFormmm() {
+    const formContainerrr = document.getElementById('form-containerrr');
+
+    if (formVisibleee) {
+      formContainerrr.style.top = '-300%';
+      formContainerrr.style.opacity = '0';
+    } else {
+      formContainerrr.style.top = '0%';
+      formContainerrr.style.opacity = '1';
+    }
+
+    formVisibleee = !formVisibleee;
+  }
+</script>
+<script defer>
+const observer = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('shows');   
+} 
+});
+});
+
+const hiddenElementss = document.querySelectorAll('.box');
+hiddenElementss.forEach((el) => observer.observe(el));
+
+
+</script>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<script defer>
+const observert = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting) {
+entry.target.classList.add('showst');   
+} 
+});
+});
+
+const hiddenElementst = document.querySelectorAll('.tabcontentt');
+hiddenElementst.forEach((el) => observert.observe(el));
+
+
+</script>
+<script>
+    function calculateInterest() {
+        var amount = parseFloat(document.getElementById('amount').value);
+        var years = parseInt(document.getElementById('years').value);
+        var interestRate = 0.1/12; // 10% interest per annum
+
+        // Calculate total amount with interest
+        var totalAmount = amount * (1 + (interestRate * years));
+        var interestAmount = totalAmount - amount ;
+
+        // Display the result
+        document.getElementById('totalResult').innerHTML = "<spam style='color:white;'>After " + years + " months, Maturity amount</spam>  <br>₹" + totalAmount.toFixed(2);
+        document.getElementById('interestResult').innerHTML = "<spam style='color:white;'>Interest earned over " + years + " months</spam> <br> ₹" + interestAmount.toFixed(2);
+    }
+
+    // Calculate interest automatically when amount or years change
+    document.getElementById('amount').addEventListener('input', calculateInterest);
+    document.getElementById('years').addEventListener('change', calculateInterest);
+
+    // Calculate interest initially on page load
+    calculateInterest();
+</script>
+<script>
+let rotationState = false;
+
+  function toggleHeight() {
+    var div = document.getElementById("resizableDiv");
+    div.classList.toggle("height-200");
+const innerContainer = document.querySelector('.inner-container');
+    if (rotationState) {
+      innerContainer.classList.remove('rotate');
+    } else {
+      innerContainer.classList.add('rotate');
+    }
+    rotationState = !rotationState;
+  }
+</script>
+<script>
+let rotationStatee = false;
+
+  function toggleHeightt() {
+    var divv = document.getElementById("resizableDivv");
+    divv.classList.toggle("height-200");
+const innerContainerr = document.querySelector('.inner-containerr');
+    if (rotationStatee) {
+      innerContainerr.classList.remove('rotatee');
+    } else {
+      innerContainerr.classList.add('rotatee');
+    }
+    rotationStatee = !rotationStatee;
+  }
+  
+</script>
+<script>
+let rotationStateee = false;
+
+  function toggleHeighttt() {
+    var divvv = document.getElementById("resizableDivvv");
+    divvv.classList.toggle("height-200");
+const innerContainerrr = document.querySelector('.inner-containerrr');
+    if (rotationStateee) {
+      innerContainerrr.classList.remove('rotateee');
+    } else {
+      innerContainerrr.classList.add('rotateee');
+    }
+    rotationStateee = !rotationStateee;
+  }
+</script>
+
+<script>
+let rotationStateeeee = false;
+
+  function toggleHeighttttt() {
+    var divvvvv = document.getElementById("resizableDivvvvv");
+    divvvvv.classList.toggle("height-200");
+const innerContainerrrrr = document.querySelector('.inner-containerrrrr');
+    if (rotationStateeeee) {
+      innerContainerrrrr.classList.remove('rotateeeee');
+    } else {
+      innerContainerrrrr.classList.add('rotateeeee');
+    }
+    rotationStateeeee = !rotationStateeeee;
+  }
+  
+</script>
+<script>
+let rotationStateeeeee = false;
+
+  function toggleHeightttttt() {
+    var divvvvvv = document.getElementById("resizableDivvvvvv");
+    divvvvvv.classList.toggle("height-200");
+const innerContainerrrrrr = document.querySelector('.inner-containerrrrrr');
+    if (rotationStateeeeee) {
+      innerContainerrrrrr.classList.remove('rotateeeeee');
+    } else {
+      innerContainerrrrrr.classList.add('rotateeeeee');
+    }
+    rotationStateeeeee = !rotationStateeeeee;
+  }
+</script>
+<script>
+  let activeDiv = document.querySelector('.active');
+
+  function makeActive(div) {
+    activeDiv.classList.remove('active');
+    div.classList.add('active');
+    activeDiv = div;
+  }
+</script>
+<script>
+ 
+  function hideAndPreventBack() {
+ 
+    history.pushState(null, null, 'register.html');
+    
+   
+    window.location.href = 'register.html'; 
+  }
+
+  document.getElementById('hideButton').addEventListener('click', hideAndPreventBack);
+</script>
+<script>
+ 
+  function HideAndPreventBack() {
+ 
+    history.pushState(null, null, 'signin.html'); to
+    window.location.href = 'signin.html'; 
+  }
+
+  document.getElementById('Hide').addEventListener('click', HideAndPreventBack);
+</script>
+<script>
+    let deferredPrompt;
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch(error => {
+            console.error('Service Worker registration failed:', error);
+          });
+      });
+
+      window.addEventListener('beforeinstallprompt', (event) => {
+        // Prevent Chrome 67 and earlier from automatically showing the prompt
+        event.preventDefault();
+        // Stash the event so it can be triggered later.
+        deferredPrompt = event;
+        // Show the install button
+        document.getElementById('installButton').style.display = 'block';
+      });
+
+      document.getElementById('installButton').addEventListener('click', () => {
+        // Show the install prompt
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          // Wait for the user to respond to the prompt
+          deferredPrompt.userChoice
+            .then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+                // Hide the install button after installation
+                document.getElementById('installButton').style.display = 'none';
+              } else {
+                console.log('User dismissed the install prompt');
+              }
+              deferredPrompt = null;
+            });
+        }
+      });
+    }
+  </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    if (!localStorage.getItem('popupShown')) {
+        setTimeout(function() {
+            var popupmessagefirst = document.getElementById("popupmessagefirst");
+            popupmessagefirst.style.display = "block";
+            popupmessagefirst.classList.add("fade-in");
+            localStorage.setItem('popupShown', 'true');
+        }, 1000); 
+    }
+});
+
+function closepopupmessagefirst() {
+    var popupmessagefirst = document.getElementById("popupmessagefirst");
+    popupmessagefirst.style.display = "none";
+    window.location.href="#main-header";
+}
+</script>
+
+<script>
+
+function showAndHideDiv() {
+  document.getElementById('myDiv').style.display = 'block';
+  setTimeout(function() {
+    document.getElementById('myDiv').style.display = 'none';
+  }, 3000); // 3 seconds
+}
+document.getElementById('Hide').addEventListener('click', showAndHideDiv);
+document.getElementById('hideButton').addEventListener('click', showAndHideDiv);
+document.getElementById('clickMe3').addEventListener('click', showAndHideDiv);
+document.getElementById('clickMe4').addEventListener('click', showAndHideDiv);
+document.getElementById('clickMe1').addEventListener('click', showAndHideDiv);
+document.getElementById('clickMe2').addEventListener('click', showAndHideDiv);
+document.getElementById('clickMe5').addEventListener('click', showAndHideDiv);
+</script>
+<script>
+  // JavaScript to hide the div after 3 seconds
+  window.onload = function() {
+    setTimeout(function() {
+      document.getElementById('timed-div').style.display = 'none';
+    }, 1500); // 3000 milliseconds = 3 seconds
+  };
+</script>
+<script>
+document.getElementById('signin').addEventListener('click', function() {
+    var divsign = document.getElementById('animatedDiv');
+    divsign.style.display = 'block'; 
+    setTimeout(() => {
+        divsign.style.top = '35%'; 
+    }, 10);
+});
+
+document.getElementById('noButton').addEventListener('click', function() {
+    var divsign = document.getElementById('animatedDiv');
+    divsign.style.top = '-40%'; 
+    setTimeout(() => {
+        divsign.style.display = 'none';
+    }, 500); 
+});
+
+document.getElementById('userlogin').addEventListener('click', function() {
+    var divsign = document.getElementById('animatedDiv');
+    divsign.style.top = '-40%'; 
+    setTimeout(() => {
+        divsign.style.display = 'none';
+    }, 500); 
+});
+
+document.getElementById('registeration').addEventListener('click', function() {
+    var divsign = document.getElementById('animatedDiv');
+    divsign.style.top = '-40%'; 
+    setTimeout(() => {
+        divsign.style.display = 'none';
+    }, 500); 
+});
+</script>
+</html>

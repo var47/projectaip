@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="icon" type="image/x-icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Angkor&family=Caprasimo&family=Macondo&family=Moirai+One&family=RocknRoll+One&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="manifest" href="manifest.json">
+    <title>Login Himachal360</title>
+</head>
+<style>
+  #timed-div {
+    display: block;
+position:fixed;
+top:0;
+left:0;
+height:100vh;
+    width: 100%;
+    text-align: center;
+    background:white;linear-gradient(#2196f3,white,white);
+z-index:1000000000;
+  }
+a:hover{
+color:white;
+transition:all 0.4s;
+}
+.d h1,.d h2{
+color:black;
+}
+ .hiddenload {
+    display: none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:white;
+z-index:10000000000;
+  }
+.Hiddenload {
+    display: none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:rgba(255,255,255,0.5);
+z-index:10000000000;
+  }
+.d{
+position:relative;
+width:100%;
+height:100vh;
+text-align:center;
+}
+.spinner {
+   position: absolute;
+   width: 15.7px;
+   height: 15.7px;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+.spinner div {
+   width: 100%;
+   height: 100%;
+   background: #474bff;
+   border-radius: 50%;
+   animation: spinner-4t3wzl 1.25s infinite backwards;
+}
+
+.spinner div:nth-child(1) {
+   animation-delay: 0.15s;
+   background-color: rgba(71,75,255,0.9);
+}
+
+.spinner div:nth-child(2) {
+   animation-delay: 0.3s;
+   background-color: rgba(71,75,255,0.8);
+}
+
+.spinner div:nth-child(3) {
+   animation-delay: 0.45s;
+   background-color: rgba(71,75,255,0.7);
+}
+
+.spinner div:nth-child(4) {
+   animation-delay: 0.6s;
+   background-color: rgba(71,75,255,0.6);
+}
+
+.spinner div:nth-child(5) {
+   animation-delay: 0.75s;
+   background-color: rgba(71,75,255,0.5);
+}
+
+@keyframes spinner-4t3wzl {
+   0% {
+      transform: rotate(0deg) translateY(-200%);
+   }
+
+   60%, 100% {
+      transform: rotate(360deg) translateY(-200%);
+   }
+}
+#email-icon{
+font-size:25px;
+position:relative;
+top:6px;
+color:black;
+right:5px;
+}
+.body::-webkit-scrollbar {
+  display: none;
+    color:white;
+    background:transparent;
+}
+
+ .body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+background:transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+display:none; 
+}
+
+body::-webkit-scrollbar-thumb {
+   background: transparent;
+display:none; 
+}
+*{
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+input,textarea,button,select,a{
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a:focus,a:visited,a:active{
+outline:none;
+}
+.body {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+html{
+scroll-behavior:smooth;
+}
+body{
+    padding:0;
+    margin:0;
+    align-items:center;
+    text-align:center;
+    background:white;
+font-family:rocknroll one;
+ scrollbar-width: none; 
+    -ms-overflow-style: none;
+overflow:hidden;
+}
+.login{
+    text-align:center;
+    align-items:center;
+position:fixed;
+top:55%;
+left:50%;
+transform:translate(-50%,-50%);
+width:40%;
+height:70%;
+border-radius:10px;
+}
+input[type="email"],input[type="password"],input[type="text"]{
+    width:92%;
+    height:40px;
+    border:none;
+    border-radius:10px 10px 0 0;
+    background:white;
+    font-size:15px;
+    outline:none;
+color:black;
+padding:0px 20px;
+border-bottom:1px solid #333;
+}
+input[type="submit"]{
+    font-size:15px;
+    background:#333A73;
+    border-radius:10px;
+    border:2px solid white;
+    color:white;
+    padding:5px 45px;
+    pointer:cursor;
+transition:all 0.5s;
+}
+input[type="submit"]:hover{
+background:white;
+border:2px solid #333A73;
+color:#333A73;
+transition:all 0.5s;
+}
+.user{
+    width:100%;
+    height:20%;
+   position:relative;
+}
+.user-icon{
+width:80px;
+height:80px;
+border-radius:50%;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+.user-icon img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+mix-blend-mode:screen;
+}
+a{
+    text-decoration:none;
+    color:#333A73;
+}
+h1,h2,p{
+    color:black;
+}
+::placeholder{
+    color:rgba(0,0,0,0.7);
+}
+input[type="email"]:focus{
+ background:white;
+border:1px solid white;
+box-shadow:0px 9px 10px rgba(0,0,0,0.4);
+border-radius:10px;
+}
+input[type="password"]:focus{
+ background:white;
+border:1px solid white;
+box-shadow:0px 9px 10px rgba(0,0,0,0.4);
+border-radius:10px;
+color:black;
+}
+.left-arrow{
+position:fixed;
+top:2%;
+left:2%;
+background:white;
+border-radius:10px;
+padding:4px 15px;
+font-size:12px;
+box-shadow:0px 0px 4px 7px rgba(0,0,0,0.2);
+}
+.material-symbols-outlined{
+position:relative;
+font-size:13px;
+top:2px;
+}
+#forget-icon{
+font-size:18px;
+}
+ .alert.fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+      animation: slideUp 0.5s ease-out forwards;
+    }
+    @keyframes slideUp {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+    }
+input {
+  caret-color: black;
+}
+@media(max-width:768px){
+.login{
+    width:100%;
+    height:70%;
+}
+input[type="email"],input[type="password"],input[type="text"]{
+    width:80%;
+    height:40px;
+    border:none;
+    border-radius:10px 10px 0 0;
+    background:white;
+    font-size:15px;
+    outline:none;
+color:black;
+border-bottom:1px solid #333;
+}
+
+}
+</style>
+<body class="body">
+<div id="timed-div">
+ <div class="d">
+  <div class="spinner">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</div>
+</div>
+<div id="myDiv" class="hiddenload">
+<div class="d">
+  <div class="spinner">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</div>
+</div>
+<div id="MyDiv" class="Hiddenload">
+<div class="d">
+  <div class="spinner">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</div>
+</div>
+<div id="alertContainer" class="position-fixed top-40 start-0   p-3" style="z-index: 11"></div>
+<form id="MainForm"> 
+<a href="index.html" class="left-arrow"><span class="material-symbols-outlined">
+arrow_back_ios_new
+</span> Home</a>
+   <div class="login">
+   <h1>Login</h1>
+   <h2>Hello, Welcome</h2>
+   <div class="user">
+   <div class="user-icon"><img src="images/username.gif" alt="..."></div>
+   </div><br>
+   <span id="email-icon" class="material-symbols-outlined">
+person
+</span><input type="email" id="email" placeholder="Email@gmail.com" ><br><br>
+   <span id="email-icon" class="material-symbols-outlined">
+lock_open
+</span><input type="password" id="Password" placeholder="Password" > <br><br>
+ <input type="checkbox" onclick="myFunction()"> Show Password<br>
+<br>
+   <input type="submit" id="HideButton" value="Log in"><br><br>
+   <p>Don't have an acount? <a href="register.html" id="hideButton">Sign up</a><br><br>
+   <br>
+   <a href="reset.html" id="forget">Forget Password <span id="forget-icon" class="material-symbols-outlined">
+sync_lock
+</span></a>
+   </div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+  import { getDatabase, ref, child, get } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
+  import { getAuth, signInWithEmailAndPassword,sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBRZrQ35ZCsWtJ_Dvcq0w0iOED2ypXv89w",
+    authDomain: "databse-b7f4b.firebaseapp.com",
+    databaseURL: "https://databse-b7f4b-default-rtdb.firebaseio.com",
+    projectId: "databse-b7f4b",
+    storageBucket: "databse-b7f4b.appspot.com",
+    messagingSenderId: "440573409846",
+    appId: "1:440573409846:web:4a49d38fc1d5e5bb803697",
+    measurementId: "G-JE7M0T3QSJ"
+  };
+   
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase();
+  const auth = getAuth(app);
+  const dbref = ref(db);
+
+  let email = document.getElementById('email');
+  let password = document.getElementById('Password');
+  let MainForm = document.getElementById('MainForm');
+  let Forgetpassowrd = document.getElementById('forgetpassword');
+
+  let signInUser = evt => {
+    evt.preventDefault();
+
+    signInWithEmailAndPassword(auth, email.value, password.value)
+      .then((credentials) => {
+        get(child(dbref, 'UsersAuthList/' + credentials.user.uid)).then((snapshot) => {
+          if (snapshot.exists()) {
+            sessionStorage.setItem("user-info", JSON.stringify({
+              firstname: snapshot.val().firstname,
+              lastname: snapshot.val().lastname,
+              number: snapshot.val().number
+            }));
+            sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
+            window.location.href = 'account.html';
+          } else {
+            alert("User data not found.");
+          }
+        });
+      })
+      .catch((error) => {
+      let errorMessage = error.message;
+
+      // Customize error messages based on error codes
+      switch (error.code) {
+       case 'auth/invalid-email':
+          errorMessage = 'The email address is not valid.';
+          break;
+        case 'auth/user-not-found':
+          errorMessage = 'No user found with this email address.';
+          break;
+        case 'auth/wrong-password':
+          errorMessage = 'The password is incorrect.';
+          break;
+        case 'auth/network-request-failed':
+          errorMessage = 'Network request failed. Please check your internet connection.';
+          break;
+        case 'auth/operation-not-allowed':
+          errorMessage = 'The operation is not allowed.';
+          break;
+        case 'auth/too-many-requests':
+          errorMessage = 'Too many requests. Please try again later.';
+          break;
+        case 'auth/invalid-credential':
+          errorMessage = 'Invalid credentials. Please double-check your email and password.';
+          break;
+          default:
+          errorMessage = 'Registration Failed: ' + errorMessage;
+          break;    
+
+      }
+
+      showAlert(errorMessage, 'danger');
+          console.error("Registration Failed:", error);
+        });
+  };
+
+let Forgetpassword
+
+  MainForm.addEventListener('submit', signInUser);
+
+function showAlert(message, alertType) {
+      const alertContainer = document.getElementById('alertContainer');
+      const alert = document.createElement('div');
+      alert.className = `alert alert-${alertType} alert-dismissible fade show`;
+      alert.setAttribute('role', 'alert');
+      alert.innerHTML = `
+        ${message}
+        
+      `;
+
+      // Customizing danger button color
+      if (alertType === 'danger') {
+        alert.classList.add('custom-danger-alert');
+      }
+
+           alertContainer.appendChild(alert);
+
+      // Automatically close the alert after 5 seconds
+      setTimeout(function() {
+        alert.classList.add('fade-out');
+        setTimeout(function() {
+          alert.remove();
+        }, 1000); // Delay the removal to match the transition duration
+      }, 2000);
+    }
+
+</script>
+
+
+    <script>
+
+    function myFunction() {
+  var x = document.getElementById("Password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    </script>
+<script>
+
+function showAndHideDiv() {
+  document.getElementById('myDiv').style.display = 'block';
+  setTimeout(function() {
+    document.getElementById('myDiv').style.display = 'none';
+  }, 3000); // 3 seconds
+}
+document.getElementById('hideButton').addEventListener('click', showAndHideDiv);
+document.getElementById('forget').addEventListener('click', showAndHideDiv);
+</script>
+<script>
+
+function ShowAndHideDiv() {
+  document.getElementById('MyDiv').style.display = 'block';
+  setTimeout(function() {
+    document.getElementById('MyDiv').style.display = 'none';
+  }, 2000); // 3 seconds
+}
+document.getElementById('HideButton').addEventListener('click', ShowAndHideDiv);
+</script>
+<script>
+ 
+    setTimeout(function() {
+      document.getElementById('timed-div').style.display = 'none';
+    }, 1500); // 3000 milliseconds = 3 seconds
+  
+</script>
+   <script>
+        // Runs when the page loads
+        window.onload = function() {
+            // Try to manipulate the history
+            window.history.pushState({page: "another"}, "another page", "index.html");
+            window.history.pushState({page: "yourpage"}, "your page", "index.html");
+
+            // Listen for the back button press (popstate event)
+            window.onpopstate = function(event) {
+                if(event && event.state && event.state.page === "another") {
+                    // Attempt to navigate the user away from your site or show a custom message
+                    window.location.href = 'index.html'; // Redirect them to another page
+                    // Or use 'window.close()' to try closing the tab, but it's likely to not work in many scenarios.
+                }
+            };
+        };
+    </script>
+
+</body>
+</html>

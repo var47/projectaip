@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        padding:0;
+        margin:0;
+        
+    }
+  #container {
+            max-height: 600px;
+            transition: max-height 0.7s ease;
+            }
+        .expanded {
+            max-height: none;
+        }
+        #toggleButton {
+            display: block;
+            width: 100px;
+            padding: 10px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            border none;
+            cursor: pointer;
+            position:relative;
+            left:15px;
+            top:20px;
+        }
+
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+            gap:2rem;
+            
+            overflow:hidden;
+            overflow-xauto;
+            padding:20px;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background:white;
+            box-shadow:2px 5px 8px rgba(0,0,0,0.5);
+            width:350px;
+            border-radius:10px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            width:100%;
+            
+        }
+
+        .label {
+            font-weight: bold;
+            margin-right: 10px;
+            color:black;
+        }
+        
+
+        .section,.gender {
+    width: 350px;
+    height: auto;
+    word-wrap: break-word; /* Allows long words to break and wrap to the next line */
+    white-space: normal; /* Ensures the text wraps naturally */
+    padding:10px 0;
+    text-align:center;
+}
+.name{
+    text-align:left;
+    font-weight:bold;
+    padding:10px;
+}
+#toggleButton{
+    display:none;
+}
+.roll{
+     text-align:center;
+    font-weight:bold;
+    font-size:20px;
+    color:red;
+    width:100%;  
+    padding:10px;
+    position:relative;
+    bottom:15px;
+}
+.time{
+    text-align:left;
+    font-weight:bold;
+    font-size:15px;
+    color:red;
+    width:100%;  
+    padding:10px;
+}
+
+@media(max-width:768px){
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+            gap:2rem;
+            
+            
+        }
+
+        .box {
+            border: 1px solid #ccc;
+             padding: 10px;
+            background:white;
+            box-shadow:2px 5px 8px rgba(0,0,0,0.5);
+            width:85%;
+            border-radius:20px;
+             margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            width:100%;
+
+        }
+
+        .label {
+            font-weight: bold;
+            margin-right: 10px;
+            color:black;
+        }
+
+        .section,.gender {
+    width: 100%;
+    height: auto;
+    word-wrap: break-word; /* Allows long words to break and wrap to the next line */
+    white-space: normal; /* Ensures the text wraps naturally */
+    padding:10px 0;
+    text-align:center;
+   
+}
+.name{
+    text-align:left;
+    font-weight:bold;
+    font-size:15px;
+    color:red;
+    width:100%;
+
+} 
+.roll{
+     text-align:center;
+    font-weight:bold;
+    font-size:20px;
+    color:red;
+    width:100%; 
+    padding:10px;
+    position:relative;
+    bottom:10px;
+}
+#toggleButton{
+    border-radius:5px;
+    display:block;
+}
+.time{
+  text-align:left;
+    font-weight:bold;
+    font-size:15px;
+    color:red;
+    width:100%;  
+    padding:10px; 
+}
+
+}
+    </style>
+</head>
+<body> 
+<a href="index.html"> < back</a>
+<h2 style="text-align:center;">What Client says</h2>
+    <div class="container mt-3" id="container">
+  
+    </div>
+<button id="toggleButton" onclick="toggleHeight()">More</button>
+
+
+
+    <script type="module" >
+           var stdNo = 0;
+        var container = document.getElementById("container");
+
+        function AddItemToTable(name, roll, sec, gen, timestamp) {
+    let box = document.createElement("div");
+    box.classList.add("box");
+
+    let row1 = document.createElement("div");
+    row1.classList.add("row");
+
+    let row2 = document.createElement("div");
+    row2.classList.add("row");
+
+    let row3 = document.createElement("div");
+    row3.classList.add("row");
+
+    let sNoCol = document.createElement("div");
+    sNoCol.classList.add("label");
+    sNoCol.textContent = " " + (++stdNo);
+    
+    let rollCol = document.createElement("div");
+    rollCol.classList.add("label", "roll");
+    rollCol.textContent = " " + roll;
+
+    let nameCol = document.createElement("div");
+    nameCol.classList.add("label", "name");
+    nameCol.textContent = " " + name;
+
+    let secCol = document.createElement("div");
+    secCol.classList.add("label", "section");
+    secCol.textContent = " " + sec;
+
+    let genCol = document.createElement("div");
+    genCol.classList.add("label", "gender");
+    genCol.textContent = " " + gen;
+
+
+    let timeCol = document.createElement("div");
+    timeCol.classList.add("label", "time");
+    const timestampDate = new Date(timestamp);
+    const formattedTime = `${timestampDate.getHours().toString().padStart(2, '0')}:${timestampDate.getMinutes().toString().padStart(2, '0')}:${timestampDate.getSeconds().toString().padStart(2, '0')}`;
+    timeCol.textContent = " " + formattedTime;
+
+    row1.appendChild(sNoCol);
+    row1.appendChild(rollCol);
+    
+    
+    row2.appendChild(secCol);
+    row2.appendChild(genCol);
+
+    
+    row3.appendChild(nameCol);
+    row3.appendChild(timeCol);
+
+    box.appendChild(row1);
+    box.appendChild(row2);
+    box.appendChild(row3);
+
+    container.appendChild(box);
+}
+
+        function AddAllItemsToTable(TheStudents) {
+    stdNo = 0;
+    container.innerHTML = "";
+    TheStudents.forEach(element => {
+        AddItemToTable(element.NameOfStd, element.RollNo, element.Section, element.Gender, element.Timestamp); // Include timestamp
+    });
+}
+
+        // Database
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getDatabase, get, ref, child, onValue  } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCDXgxdDeeO6nHdyXslDIGxJQYouX3Cwbo",
+            authDomain: "crud-8a271.firebaseapp.com",
+            projectId: "crud-8a271",
+            storageBucket: "crud-8a271.appspot.com",
+            messagingSenderId: "10047076141",
+            appId: "1:10047076141:web:88fa13241e7ffa225185a4"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+
+        function GetAllDataRealtime() {
+            const dbref = ref(db, "TheStudents");
+
+            onValue(dbref, (snapshot) => {
+                var students = [];
+                snapshot.forEach(childSnapshot => {
+                    students.push(childSnapshot.val());
+                });
+
+                AddAllItemsToTable(students);
+            })
+        }
+
+
+
+        window.onload = GetAllDataRealtime;
+    </script>
+    <script>
+  function toggleHeight() {
+    var container = document.getElementById('container');
+    var button = document.getElementById('toggleButton');
+    
+    // When expanding
+    if (!container.classList.contains('expanded')) {
+        // Temporarily remove any max-height restriction
+        container.style.maxHeight = 'none';
+        // Get the full height required for the content
+        var fullHeight = container.scrollHeight + 'px';
+        
+        // Re-apply the max-height for starting point of transition
+        container.style.maxHeight = '500px';
+        // Force browser to apply the change
+        getComputedStyle(container).maxHeight;
+        
+        // Start transition to full height
+        container.style.maxHeight = fullHeight;
+        button.innerHTML = 'Short';
+        container.classList.add('expanded');
+    } else {
+        // When collapsing
+        container.style.maxHeight = '500px';
+        button.innerHTML = 'More';
+        container.classList.remove('expanded');
+    }
+}
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
